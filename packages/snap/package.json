@@ -33,7 +33,7 @@
     "bs58check": "^3.0.1",
     "buffer": "^6.0.3",
     "mina-signer": "^2.1.1",
-    "o1js": "^0.15.4"
+    "o1js": "^0.16.0"
   },
   "devDependencies": {
     "@jest/globals": "^29.5.0",

@@ -4,6 +4,7 @@ import type { OnRpcRequestHandler } from '@metamask/snaps-sdk';
 import { panel, text } from '@metamask/snaps-sdk';
 import Client from 'mina-signer';
 
+import { Add } from './Add.js';
 import { generateKeyPair } from './Mina/account';
 import type { NetworkConfig } from './Mina/interfaces';
 import { Networks } from './Mina/types/Networks';
@@ -86,6 +87,7 @@ export const onRpcRequest: OnRpcRequestHandler = async ({
       }
     }
     case 'hello':
+      await Add.compile();
       return snap.request({
         method: 'snap_dialog',
         params: {
